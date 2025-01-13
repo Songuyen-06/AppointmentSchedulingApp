@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace AppointmentSchedulingApp.Server.Profiles
+namespace AppointmentSchedulingApp.Domain.Profiles
 {
     public class CategoryProfile:Profile
     {
