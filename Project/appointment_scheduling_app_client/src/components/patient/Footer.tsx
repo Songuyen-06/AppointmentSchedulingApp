@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div className='h-52'>Footer</div>
+    <div className='relative top-96 h-52'>Footer</div>
   )
 }

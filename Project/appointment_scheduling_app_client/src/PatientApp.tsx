@@ -8,7 +8,7 @@ const PatientApp = () => {
     <>
       <NavProvider>
         <Header />
-        <Body />
+        <Body />       
         <Footer />
       </NavProvider>
     </>

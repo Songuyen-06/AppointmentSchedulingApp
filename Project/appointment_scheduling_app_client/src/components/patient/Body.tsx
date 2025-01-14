@@ -12,7 +12,13 @@ const Body = () => {
   const navContext = useContext(NavContext);
   const nav = navContext ? navContext.nav : "Home";
   return (
-    <>
+    <div
+      className="relative min-h-screen  w-full bg-cover bg-center flex flex-col items-center justify-center"
+      style={{ backgroundImage: "url('/background.jpeg')" }}
+      id="Header"
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
       {nav === "Home" ? (
         <Home />
       ) : nav === "Specialties" ? (
@@ -26,7 +32,7 @@ const Body = () => {
       ) : (
         <AppointmentBooking />
       )}
-    </>
+    </div>
   );
 };
 export default Body;
