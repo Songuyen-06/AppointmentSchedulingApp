@@ -2,6 +2,6 @@ import React from 'react'
 
 export const DoctorList = () => {
   return (
-    <div>DoctorList</div>
+    <div className="absolute top-52 " >DoctorList</div>
   )
 }

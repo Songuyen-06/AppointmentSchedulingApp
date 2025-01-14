@@ -2,7 +2,7 @@
  
  export const ServiceList = () => {
    return (
-     <div>ServiceList</div>
+     <div  className="absolute top-52 ">ServiceList</div>
    )
  }
  
