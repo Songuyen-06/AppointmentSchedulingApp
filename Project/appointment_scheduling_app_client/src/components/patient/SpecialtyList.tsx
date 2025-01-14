@@ -2,7 +2,7 @@ import React from 'react'
 
 export const SpecialtyList = () => {
   return (
-    <div className="my-10 px-10 max-w-full">
+    <div className="absolute top-52 my-10 px-10 max-w-full">
     <h2 className="text-xl uppercase mb-4">Kết quả tìm kiếm</h2>
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-7  ">
       {/* {data.map((item) => (
