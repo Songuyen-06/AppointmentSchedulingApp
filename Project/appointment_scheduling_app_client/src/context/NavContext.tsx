@@ -15,7 +15,7 @@ const NavContext = createContext<NavContextType | undefined>(undefined);
     const [nav, setNav] = useState("Home");
   
     return (
-      <NavContext.Provider value={{ nav, setNav }}>
+      <NavContext.Provider value={{ nav, setNav }} >
         {children}
       </NavContext.Provider>
     );

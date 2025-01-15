@@ -62,17 +62,83 @@ VALUES
 CREATE TABLE Categories (
   CategoryId INT NOT NULL IDENTITY(1,1),
   CategoryName VARCHAR(30) NOT NULL,
+  Image NVARCHAR(200) NOT NULL ,
   PRIMARY KEY (CategoryId)
 ) ;
-INSERT INTO Categories (CategoryName) 
+INSERT INTO Categories (CategoryName, Image) 
 VALUES 
-('General Medicine'),
-('Surgery'),
-('Pediatrics'),
-('Dermatology'),
-('Ophthalmology');
+('General Medicine', 'https://example.com/general_medicine.jpg'),
+('Surgery', 'https://example.com/surgery.jpg'),
+('Pediatrics', 'https://example.com/pediatrics.jpg'),
+('Dermatology', 'https://example.com/dermatology.jpg'),
+('Ophthalmology', 'https://example.com/ophthalmology.jpg');
 
------------------------------------------------------------------
+--------------------------------------------------------------------------
+CREATE TABLE Devices (
+    DeviceId INT PRIMARY KEY IDENTITY(1,1),
+    Name VARCHAR(255) NOT NULL,             
+    Description TEXT,                      
+    Functionality TEXT                      
+);
+INSERT INTO Devices (Name, Description, Functionality)
+VALUES
+    ('MRI Scanner', 'Magnetic Resonance Imaging device', 'Provides detailed imaging of internal organs'),
+    ('X-Ray Machine', 'Standard X-ray imaging device', 'Produces X-ray images for diagnostic purposes'),
+    ('ECG Machine', 'Electrocardiogram device', 'Monitors and records the electrical activity of the heart'),
+    ('Ultrasound Machine', 'Used for non-invasive imaging', 'Creates real-time images of internal organs'),
+    ('Stethoscope', 'Standard diagnostic tool', 'Used for auscultation of heart and lungs'),
+    ('Blood Pressure Monitor', 'Measures blood pressure', 'Monitors systolic and diastolic pressure'),
+    ('Ophthalmoscope', 'Eye examination tool', 'Used to inspect the retina and other parts of the eye'),
+    ('Dental Tools', 'Specialized tools for dental exams', 'Includes scaler, mirror, and probe');
+
+----------------------------------------------------------------------------------
+
+
+CREATE TABLE Specialties (
+  SpecialtyId INT NOT NULL IDENTITY(1,1),
+  SpecialtyName VARCHAR(100) NOT NULL,
+  SpecialtyDescription TEXT,
+  Image VARCHAR(200)  NULL default 'https://th.bing.com/th/id/OIP.5kVbDAdvd-TbbhL31d-2sgHaE4?w=264&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+  PRIMARY KEY (SpecialtyId)
+);
+INSERT INTO Specialties (SpecialtyName, SpecialtyDescription)
+VALUES
+  ('General Internal Medicine', 'Treats non-surgical diseases and manages general health conditions of the body.'),
+  ('Cardiology', 'Specializes in diseases related to the heart and blood vessels.'),
+  ('Endocrinology', 'Treats diseases related to hormones and the endocrine glands (such as diabetes, hypothyroidism).'),
+  ('Gastroenterology', 'Specializes in issues related to the digestive system, such as the stomach, intestines, and liver.'),
+  ('General Surgery', 'Surgeries related to internal organs.'),
+  ('Neurosurgery', 'Treats neurological diseases that require surgery, such as brain and spinal cord surgeries.'),
+  ('Orthopedic Surgery', 'Specializes in treating bone and joint injuries.'),
+  ('Obstetrics', 'Treats issues related to pregnancy and childbirth.'),
+  ('Gynecology', 'Treats diseases related to the female reproductive system.'),
+  ('Pediatrics', 'Specializes in the health and care of children from newborns to adolescents.'),
+  ('Ophthalmology', 'Treats diseases related to the eyes and vision.'),
+  ('ENT (Ear, Nose, and Throat)', 'Specializes in diseases related to the ears, nose, and throat.'),
+  ('Dermatology', 'Treats skin, nail, and hair diseases.'),
+  ('Psychiatry', 'Treats mental health disorders and psychiatric conditions.'),
+  ('Laboratory Medicine', 'Performs clinical laboratory tests such as blood, urine tests, and imaging studies.'),
+  ('Intensive Care Medicine', 'Treats critically ill patients or those requiring special care.');
+  -----------------------------------------------------------------------------------------------------------------------
+  CREATE TABLE DeviceSpecialties (
+    SpecialtyId INT NOT NULL,            
+    DeviceId INT NOT NULL,               
+    PRIMARY KEY (SpecialtyId, DeviceId), 
+    FOREIGN KEY (SpecialtyId) REFERENCES Specialties(SpecialtyId),
+    FOREIGN KEY (DeviceId) REFERENCES Devices(DeviceId),
+       
+);
+INSERT INTO DeviceSpecialties (SpecialtyId, DeviceId)
+VALUES
+    (1, 1),
+    (1, 2),
+    (1, 3),
+    (1, 4),
+    (2, 1),
+    (2, 2),
+    (2, 3);
+
+---------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Doctors (
     DoctorId INT NOT NULL,
     CurrentWork TEXT,
@@ -109,35 +175,8 @@ VALUES
 (18, 'Rheumatologist at Arthritis Clinic', 'Rheumatologist for arthritis and autoimmune diseases', 'Arthritis Clinic', 'Rheumatology Specialist Award', 'Arthritis research project', 'Rheumatology residency at Arthritis Institute', '10 years in rheumatology', 'Professor', 'Doctorate'),
 (19, 'General practitioner at General Health Center', 'General practitioner providing comprehensive care', 'General Health Center', 'Top GP Award', 'General care research project', 'General medicine residency at Health Institute', '7 years in general practice', 'Associate Professor', 'Master'),
 (20, 'Plastic surgeon at Aesthetic Clinic', 'Plastic surgeon specializing in reconstructive surgery', 'Aesthetic Clinic', 'Best Reconstructive Surgeon', 'Surgery research project', 'Plastic surgery training at Aesthetic Institute', '15 years in plastic surgery', 'Professor', 'Doctorate');
+-----------------------------------------------------------------------------------------------------------------
 
-
-
---------------------------------------------------------------------------
-CREATE TABLE Specialties (
-  SpecialtyId INT NOT NULL IDENTITY(1,1),
-  SpecialtyName VARCHAR(100) NOT NULL,
-  SpecialtyDescription TEXT,
-  PRIMARY KEY (SpecialtyId)
-);
-INSERT INTO Specialties (SpecialtyName, SpecialtyDescription)
-VALUES
-  ('General Internal Medicine', 'Treats non-surgical diseases and manages general health conditions of the body.'),
-  ('Cardiology', 'Specializes in diseases related to the heart and blood vessels.'),
-  ('Endocrinology', 'Treats diseases related to hormones and the endocrine glands (such as diabetes, hypothyroidism).'),
-  ('Gastroenterology', 'Specializes in issues related to the digestive system, such as the stomach, intestines, and liver.'),
-  ('General Surgery', 'Surgeries related to internal organs.'),
-  ('Neurosurgery', 'Treats neurological diseases that require surgery, such as brain and spinal cord surgeries.'),
-  ('Orthopedic Surgery', 'Specializes in treating bone and joint injuries.'),
-  ('Obstetrics', 'Treats issues related to pregnancy and childbirth.'),
-  ('Gynecology', 'Treats diseases related to the female reproductive system.'),
-  ('Pediatrics', 'Specializes in the health and care of children from newborns to adolescents.'),
-  ('Ophthalmology', 'Treats diseases related to the eyes and vision.'),
-  ('ENT (Ear, Nose, and Throat)', 'Specializes in diseases related to the ears, nose, and throat.'),
-  ('Dermatology', 'Treats skin, nail, and hair diseases.'),
-  ('Psychiatry', 'Treats mental health disorders and psychiatric conditions.'),
-  ('Laboratory Medicine', 'Performs clinical laboratory tests such as blood, urine tests, and imaging studies.'),
-  ('Intensive Care Medicine', 'Treats critically ill patients or those requiring special care.');
-  -----------------------------------------------------------------------------------------------------------------------
 CREATE TABLE DoctorSpecialties (
   DoctorId INT NOT NULL,
   SpecialtyId INT NOT NULL,
@@ -251,7 +290,6 @@ CREATE TABLE Services (
   ServiceId INT NOT NULL IDENTITY(1,1),
   ServiceName VARCHAR(30) NOT NULL,
   Overview TEXT,
-  Devices TEXT,
   Process TEXT,
   TreatmentTechniques TEXT,
   Price DECIMAL(18, 2) NOT NULL,
@@ -263,29 +301,64 @@ CREATE TABLE Services (
   CONSTRAINT SpecialtyId_FK FOREIGN KEY (SpecialtyId) REFERENCES Specialties (SpecialtyId)
 );
 
-INSERT INTO Services (ServiceName, Overview, Devices, Process, TreatmentTechniques, Price, CategoryId, SpecialtyId)
+INSERT INTO Services (ServiceName, Overview, Process, TreatmentTechniques, Price, CategoryId, SpecialtyId)
 VALUES
-('General Consultation', 'Basic health consultation', 'Stethoscope, BP Monitor', 'Patient history, physical exam', 'No special technique', 500000, 1, 1),
-('Dental Checkup', 'Routine dental exam', 'X-ray machine, dental tools', 'Examine teeth and gums', 'Scaling, cleaning', 700000, 2, 2),
-('Eye Exam', 'Comprehensive eye exam', 'Ophthalmoscope, Visual acuity chart', 'Check vision, retina health', 'Laser therapy for retinal problems', 800000, 3, 3),
-('Physical Therapy', 'Rehabilitation for mobility issues', 'Therapeutic equipment', 'Strength exercises, massage', 'Manual therapy, electrotherapy', 600000, 4, 4),
-('Lab Test', 'Routine laboratory testing', 'Blood test, urine test', 'Collection of samples, testing', 'Blood glucose test, lipid profile', 300000, 5, 5),
-('Psychological Consultation', 'Mental health checkup', 'Psychological assessment tools', 'Talk therapy, stress management', 'Cognitive Behavioral Therapy (CBT)', 400000, 1, 6),
-('Pediatric Consultation', 'Health check for children', 'Pediatric stethoscope, thermometer', 'Growth tracking, vaccination', 'Vaccinations, growth monitoring', 600000, 2, 7),
-('Ultrasound', 'Imaging for various medical conditions', 'Ultrasound machine', 'Non-invasive imaging', 'Guided ultrasound for treatment', 1000000, 3, 8),
-('Dermatology Consultation', 'Consultation for skin issues', 'Dermatological tools, camera', 'Examine skin conditions', 'Cryotherapy, laser treatments', 700000, 4, 9),
-('Nutritional Counseling', 'Diet and nutrition planning', 'Diet charts, BMI scales', 'Diet evaluation and planning', 'Nutritional supplements, weight loss guidance', 500000, 5, 10),
-('Vaccination', 'Routine and travel vaccinations', 'Syringes, vaccines', 'Injection of vaccines', 'Immunization, post-vaccination observation', 200000, 2, 11),
-('Chiropractic Consultation', 'Spinal health checkup', 'Chiropractic table', 'Spinal manipulation, assessment', 'Spinal realignment', 800000, 1, 12),
-('Hearing Test', 'Testing hearing levels', 'Audiometer', 'Test sound perception, hearing thresholds', 'Hearing aids, speech therapy', 600000, 3, 13),
-('Cardiology Checkup', 'Heart health checkup', 'ECG, stethoscope', 'Heart check, blood pressure monitoring', 'Stress test, ECG', 900000, 4, 14),
-('Orthopedic Consultation', 'Bone and joint health checkup', 'X-ray machine, orthopedic tools', 'Examine joints, bones', 'Casting, joint replacement', 850000, 5, 15),
-('Fertility Consultation', 'Consultation for fertility issues', 'Ultrasound, hormone testing kits', 'Blood tests, ultrasound for fertility', 'IVF, fertility medications', 1200000, 2, 16),
-('Diabetes Consultation', 'Diabetes care and management', 'Glucose meters', 'Blood glucose testing, health monitoring', 'Insulin therapy, dietary changes', 450000, 3, 1),
-('Respiratory Therapy', 'Treatment for respiratory issues', 'Oxygen mask, nebulizers', 'Breathing exercises, medication administration', 'Nebulization, oxygen therapy', 700000, 4, 2),
-('Gastroenterology Consultation', 'Digestive health checkup', 'Endoscopy, colonoscopy tools', 'Examine digestive system', 'Gastroscopy, colonoscopy', 1100000, 5, 3),
-('Emergency Care', 'Emergency treatment for injuries', 'Trauma kits, stretchers', 'First aid, trauma care', 'Surgical intervention, pain management', 1500000, 1, 4);
-------------------------------------------------------------------------------------------------------
+('General Consultation', 'Basic health consultation', 'Patient history, physical exam', 'No special technique', 500000, 1, 1),
+('Dental Checkup', 'Routine dental exam', 'Examine teeth and gums', 'Scaling, cleaning', 700000, 2, 2),
+('Eye Exam', 'Comprehensive eye exam', 'Check vision, retina health', 'Laser therapy for retinal problems', 800000, 3, 3),
+('Physical Therapy', 'Rehabilitation for mobility issues', 'Strength exercises, massage', 'Manual therapy, electrotherapy', 600000, 4, 4),
+('Lab Test', 'Routine laboratory testing', 'Collection of samples, testing', 'Blood glucose test, lipid profile', 300000, 5, 5),
+('Psychological Consultation', 'Mental health checkup', 'Talk therapy, stress management', 'Cognitive Behavioral Therapy (CBT)', 400000, 1, 6),
+('Pediatric Consultation', 'Health check for children', 'Growth tracking, vaccination', 'Vaccinations, growth monitoring', 600000, 2, 7),
+('Ultrasound', 'Imaging for various medical conditions', 'Non-invasive imaging', 'Guided ultrasound for treatment', 1000000, 3, 8),
+('Dermatology Consultation', 'Consultation for skin issues', 'Examine skin conditions', 'Cryotherapy, laser treatments', 700000, 4, 9),
+('Nutritional Counseling', 'Diet and nutrition planning', 'Diet evaluation and planning', 'Nutritional supplements, weight loss guidance', 500000, 5, 10),
+('Vaccination', 'Routine and travel vaccinations', 'Injection of vaccines', 'Immunization, post-vaccination observation', 200000, 2, 11),
+('Chiropractic Consultation', 'Spinal health checkup', 'Spinal manipulation, assessment', 'Spinal realignment', 800000, 1, 12),
+('Hearing Test', 'Testing hearing levels', 'Test sound perception, hearing thresholds', 'Hearing aids, speech therapy', 600000, 3, 13),
+('Cardiology Checkup', 'Heart health checkup', 'Heart check, blood pressure monitoring', 'Stress test, ECG', 900000, 4, 14),
+('Orthopedic Consultation', 'Bone and joint health checkup', 'Examine joints, bones', 'Casting, joint replacement', 850000, 5, 15),
+('Fertility Consultation', 'Consultation for fertility issues', 'Blood tests, ultrasound for fertility', 'IVF, fertility medications', 1200000, 2, 16),
+('Diabetes Consultation', 'Diabetes care and management', 'Blood glucose testing, health monitoring', 'Insulin therapy, dietary changes', 450000, 3, 1),
+('Respiratory Therapy', 'Treatment for respiratory issues', 'Breathing exercises, medication administration', 'Nebulization, oxygen therapy', 700000, 4, 2),
+('Gastroenterology Consultation', 'Digestive health checkup', 'Examine digestive system', 'Gastroscopy, colonoscopy', 1100000, 5, 3),
+('Emergency Care', 'Emergency treatment for injuries', 'First aid, trauma care', 'Surgical intervention, pain management', 1500000, 1, 4);
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE DeviceServices (
+    ServiceId INT NOT NULL,
+    DeviceId INT NOT NULL,
+    PRIMARY KEY (ServiceId, DeviceId),
+    FOREIGN KEY (ServiceId) REFERENCES Services(ServiceId) ON DELETE CASCADE,
+    FOREIGN KEY (DeviceId) REFERENCES Devices(DeviceId) ON DELETE CASCADE
+);
+INSERT INTO DeviceServices (ServiceId, DeviceId)
+VALUES
+    (1, 5),
+    (1, 6),
+    (2, 2),
+    (2, 8),
+    (3, 7),
+    (4, 4),
+    (5, 6),
+    (6, 5),
+    (7, 5),
+    (8, 4),
+    (9, 7),
+    (10, 6),
+    (11, 6),
+    (12, 5),
+    (13, 1),
+    (14, 3),
+    (15, 2),
+    (16, 4),
+    (17, 6),
+    (18, 4),
+    (19, 1),
+    (20, 4);
+
+---------------------------------------------------------------------------------------------------------------
+
 CREATE TABLE DoctorServices (
   ServiceId INT NOT NULL,
   DoctorId INT NOT NULL,
@@ -321,7 +394,7 @@ VALUES
 (20, 20);
 
 
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE Reservations (
   ReservationId int NOT NULL IDENTITY(1,1),
