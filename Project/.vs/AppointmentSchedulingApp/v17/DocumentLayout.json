@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{D3B96E50-F665-4945-90FC-156D072309E0}|AppointmentSchedulingApp.Infrastructure\\AppointmentSchedulingApp.Infrastructure.csproj|solutionrelative:appointmentschedulingapp.infrastructure\\appointmentschedulingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF187FFB-FDEA-4A61-A4A8-19BF9DC0D05B}|AppointmentSchedulingApp.Domain\\AppointmentSchedulingApp.Domain.csproj|c:\\users\\son\\onedrive\\m\u00E1y t\u00EDnh\\appointmentschedulingapp\\project\\appointmentschedulingapp.domain\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF187FFB-FDEA-4A61-A4A8-19BF9DC0D05B}|AppointmentSchedulingApp.Domain\\AppointmentSchedulingApp.Domain.csproj|solutionrelative:appointmentschedulingapp.domain\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9D9E102C-91B5-408C-B3D1-3D8AEC5A1628}|AppointmentSchedulingApp.Server\\AppointmentSchedulingApp.Server.csproj|c:\\users\\son\\onedrive\\m\u00E1y t\u00EDnh\\appointmentschedulingapp\\project\\appointmentschedulingapp.server\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D9E102C-91B5-408C-B3D1-3D8AEC5A1628}|AppointmentSchedulingApp.Server\\AppointmentSchedulingApp.Server.csproj|solutionrelative:appointmentschedulingapp.server\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -203,27 +199,14 @@
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Infrastructure\\AppointmentSchedulingDbContext.cs",
               "ToolTip": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Infrastructure\\AppointmentSchedulingDbContext.cs",
               "RelativeToolTip": "AppointmentSchedulingApp.Infrastructure\\AppointmentSchedulingDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:40:18.377Z",
+              "WhenOpened": "2025-01-15T13:55:14.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\Models\\Doctor.cs",
-              "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\Models\\Doctor.cs",
-              "ToolTip": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\Models\\Doctor.cs",
-              "RelativeToolTip": "AppointmentSchedulingApp.Domain\\Models\\Doctor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:40:05.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "DoctorDetailDTO.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\DTOs\\DoctorDetailDTO.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\DTOs\\DoctorDetailDTO.cs",
@@ -231,11 +214,12 @@
               "RelativeToolTip": "AppointmentSchedulingApp.Domain\\DTOs\\DoctorDetailDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T12:48:49.731Z"
+              "WhenOpened": "2025-01-14T12:48:49.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DoctorDTO.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\DTOs\\DoctorDTO.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\DTOs\\DoctorDTO.cs",
@@ -247,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ServiceDetailDTO.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\DTOs\\ServiceDetailDTO.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\DTOs\\ServiceDetailDTO.cs",
@@ -259,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ServiceProfile.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\Profiles\\ServiceProfile.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\Profiles\\ServiceProfile.cs",
@@ -271,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "ServiceDTO.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\DTOs\\ServiceDTO.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\DTOs\\ServiceDTO.cs",
@@ -283,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "CategoryProfile.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\Profiles\\CategoryProfile.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\Profiles\\CategoryProfile.cs",
@@ -295,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "CategoryDTO.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\DTOs\\CategoryDTO.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\DTOs\\CategoryDTO.cs",
@@ -307,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "AppointmentSchedulingApp.Services.Tests.csproj",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Services.Tests\\AppointmentSchedulingApp.Services.Tests.csproj",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Services.Tests\\AppointmentSchedulingApp.Services.Tests.csproj",
@@ -319,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\Contracts\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\Contracts\\Repositories\\IGenericRepository.cs",
@@ -331,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Infrastructure\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Infrastructure\\Repositories\\GenericRepository.cs",
@@ -343,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Server\\appsettings.json",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Server\\appsettings.json",
@@ -355,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "AppointmentSchedulingApp.Services.csproj",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Services\\AppointmentSchedulingApp.Services.csproj",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Services\\AppointmentSchedulingApp.Services.csproj",
@@ -367,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Services\\CategoryService.cs",
@@ -379,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Server\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Server\\Controllers\\CategoryController.cs",
@@ -387,12 +371,11 @@
               "RelativeToolTip": "AppointmentSchedulingApp.Server\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T11:07:39.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T11:07:39.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\Contracts\\Repositories\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\Contracts\\Repositories\\ICategoryRepository.cs",
@@ -404,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\Contracts\\Services\\ICategoryService.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\Contracts\\Services\\ICategoryService.cs",
@@ -416,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Infrastructure\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Infrastructure\\Repositories\\CategoryRepository.cs",
@@ -428,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Server\\Program.cs",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Server\\Program.cs",
@@ -440,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "AppointmentSchedulingApp.Domain",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Domain\\AppointmentSchedulingApp.Domain.csproj",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Domain\\AppointmentSchedulingApp.Domain.csproj",
@@ -451,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "AppointmentSchedulingApp.Infrastructure",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Infrastructure\\AppointmentSchedulingApp.Infrastructure.csproj",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Infrastructure\\AppointmentSchedulingApp.Infrastructure.csproj",
@@ -462,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "AppointmentSchedulingApp.Services",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\AppointmentSchedulingApp.Services\\AppointmentSchedulingApp.Services.csproj",
               "RelativeDocumentMoniker": "AppointmentSchedulingApp.Services\\AppointmentSchedulingApp.Services.csproj",
@@ -473,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\.gitignore",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\.gitignore",
@@ -484,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": ".env",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\appointment_scheduling_app_client\\.env",
               "RelativeDocumentMoniker": "appointment_scheduling_app_client\\.env",
@@ -496,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\appointment_scheduling_app_client\\.gitignore",
               "RelativeDocumentMoniker": "appointment_scheduling_app_client\\.gitignore",
@@ -508,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 41,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\Repositories\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\Repositories\\ICategoryRepository.cs",
@@ -519,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 42,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\Repositories\\CategoryRepository.cs",
@@ -530,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 43,
               "Title": "CategoryProfile.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\Profiles\\CategoryProfile.cs",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\Profiles\\CategoryProfile.cs",
@@ -541,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 44,
               "Title": "CategoryDTOcs.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\DTOs\\CategoryDTOcs.cs",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\DTOs\\CategoryDTOcs.cs",
@@ -552,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 45,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\Services\\ICategoryService.cs",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\Services\\ICategoryService.cs",
@@ -563,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 46,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\Services\\CategoryService.cs",
@@ -574,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 47,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\appsettings.json",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\appsettings.json",
@@ -585,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 48,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\Program.cs",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\Program.cs",
@@ -596,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\Son\\AppData\\Roaming\\Microsoft\\UserSecrets\\07ddd48a-2aac-4632-94cc-a7f26ad1dd4a\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\07ddd48a-2aac-4632-94cc-a7f26ad1dd4a\\secrets.json",
@@ -608,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "appointment_scheduling_app_client.esproj",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\appointment_scheduling_app_client\\appointment_scheduling_app_client.esproj",
               "RelativeDocumentMoniker": "appointment_scheduling_app_client\\appointment_scheduling_app_client.esproj",
@@ -620,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 49,
               "Title": "AppointmentSchedulingApp.Server.csproj",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\AppointmentSchedulingAppServer\\AppointmentSchedulingApp.Server.csproj",
               "RelativeDocumentMoniker": "..\\AppointmentSchedulingAppServer\\AppointmentSchedulingApp.Server.csproj",
@@ -631,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "react.svg",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointment_scheduling_app_client\\src\\assets\\react.svg",
               "RelativeDocumentMoniker": "..\\appointment_scheduling_app_client\\src\\assets\\react.svg",
@@ -642,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "App.tsx",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointment_scheduling_app_client\\src\\App.tsx",
               "RelativeDocumentMoniker": "..\\appointment_scheduling_app_client\\src\\App.tsx",
@@ -653,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointment_scheduling_app_client\\src\\App.css",
               "RelativeDocumentMoniker": "..\\appointment_scheduling_app_client\\src\\App.css",
@@ -664,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\appointment_scheduling_app_client\\package.json",
               "RelativeDocumentMoniker": "appointment_scheduling_app_client\\package.json",
@@ -676,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "tsconfig.json",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\appointment_scheduling_app_client\\tsconfig.json",
               "RelativeDocumentMoniker": "appointment_scheduling_app_client\\tsconfig.json",
@@ -688,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "eslint.config.js",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\appointment_scheduling_app_client\\eslint.config.js",
               "RelativeDocumentMoniker": "appointment_scheduling_app_client\\eslint.config.js",
@@ -700,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "vite.config.ts",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\Project\\appointment_scheduling_app_client\\vite.config.ts",
               "RelativeDocumentMoniker": "appointment_scheduling_app_client\\vite.config.ts",
@@ -712,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointmentschedulingapp.client\\.gitignore",
               "RelativeDocumentMoniker": "..\\appointmentschedulingapp.client\\.gitignore",
@@ -723,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "App.tsx",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointmentschedulingapp.client\\src\\App.tsx",
               "RelativeDocumentMoniker": "..\\appointmentschedulingapp.client\\src\\App.tsx",
@@ -734,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointmentschedulingapp.client\\index.html",
               "RelativeDocumentMoniker": "..\\appointmentschedulingapp.client\\index.html",
@@ -745,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "eslint.config.js",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointmentschedulingapp.client\\eslint.config.js",
               "RelativeDocumentMoniker": "..\\appointmentschedulingapp.client\\eslint.config.js",
@@ -756,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "tsconfig.json",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointmentschedulingapp.client\\tsconfig.json",
               "RelativeDocumentMoniker": "..\\appointmentschedulingapp.client\\tsconfig.json",
@@ -767,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointmentschedulingapp.client\\package.json",
               "RelativeDocumentMoniker": "..\\appointmentschedulingapp.client\\package.json",
@@ -778,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "vite.config.ts",
               "DocumentMoniker": "C:\\Users\\Son\\OneDrive\\M\u00E1y t\u00EDnh\\AppointmentSchedulingApp\\appointmentschedulingapp.client\\vite.config.ts",
               "RelativeDocumentMoniker": "..\\appointmentschedulingapp.client\\vite.config.ts",

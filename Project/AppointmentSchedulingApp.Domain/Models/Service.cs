@@ -11,8 +11,6 @@ public partial class Service
 
     public string? Overview { get; set; }
 
-    public string? Devices { get; set; }
-
     public string? Process { get; set; }
 
     public string? TreatmentTechniques { get; set; }
@@ -30,6 +28,8 @@ public partial class Service
     public virtual ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
 
     public virtual Specialty Specialty { get; set; } = null!;
+
+    public virtual ICollection<Device> Devices { get; set; } = new List<Device>();
 
     public virtual ICollection<Doctor> Doctors { get; set; } = new List<Doctor>();
 }

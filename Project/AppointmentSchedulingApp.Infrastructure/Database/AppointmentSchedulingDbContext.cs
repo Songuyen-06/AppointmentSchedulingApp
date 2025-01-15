@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using AppointmentSchedulingApp.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AppointmentSchedulingApp.Infrastructure;
+namespace AppointmentSchedulingApp.Infrastructure.Database;
 
 public partial class AppointmentSchedulingDbContext : DbContext
 {
@@ -19,6 +18,8 @@ public partial class AppointmentSchedulingDbContext : DbContext
     public virtual DbSet<Category> Categories { get; set; }
 
     public virtual DbSet<Certification> Certifications { get; set; }
+
+    public virtual DbSet<Device> Devices { get; set; }
 
     public virtual DbSet<Doctor> Doctors { get; set; }
 
@@ -48,16 +49,17 @@ public partial class AppointmentSchedulingDbContext : DbContext
     {
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A0BBB92011B");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A0B69BFC47E");
 
             entity.Property(e => e.CategoryName)
                 .HasMaxLength(30)
                 .IsUnicode(false);
+            entity.Property(e => e.Image).HasMaxLength(200);
         });
 
         modelBuilder.Entity<Certification>(entity =>
         {
-            entity.HasKey(e => e.CertificationId).HasName("PK__Certific__1237E58A34D6C0E4");
+            entity.HasKey(e => e.CertificationId).HasName("PK__Certific__1237E58A641026D9");
 
             entity.Property(e => e.CertificationUrl)
                 .HasMaxLength(200)
@@ -70,9 +72,20 @@ public partial class AppointmentSchedulingDbContext : DbContext
                 .HasConstraintName("Certification_FK");
         });
 
+        modelBuilder.Entity<Device>(entity =>
+        {
+            entity.HasKey(e => e.DeviceId).HasName("PK__Devices__49E1231122C4DF23");
+
+            entity.Property(e => e.Description).HasColumnType("text");
+            entity.Property(e => e.Functionality).HasColumnType("text");
+            entity.Property(e => e.Name)
+                .HasMaxLength(255)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<Doctor>(entity =>
         {
-            entity.HasKey(e => e.DoctorId).HasName("PK__Doctors__2DC00EBF644CD9D2");
+            entity.HasKey(e => e.DoctorId).HasName("PK__Doctors__2DC00EBF10A08355");
 
             entity.Property(e => e.DoctorId).ValueGeneratedNever();
             entity.Property(e => e.AcademicTitle)
@@ -100,14 +113,14 @@ public partial class AppointmentSchedulingDbContext : DbContext
                     r => r.HasOne<Service>().WithMany()
                         .HasForeignKey("ServiceId")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__DoctorSer__Servi__5FB337D6"),
+                        .HasConstraintName("FK__DoctorSer__Servi__6A30C649"),
                     l => l.HasOne<Doctor>().WithMany()
                         .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__DoctorSer__Docto__5EBF139D"),
+                        .HasConstraintName("FK__DoctorSer__Docto__693CA210"),
                     j =>
                     {
-                        j.HasKey("DoctorId", "ServiceId").HasName("PK__DoctorSe__9191B5BF5A7CEE23");
+                        j.HasKey("DoctorId", "ServiceId").HasName("PK__DoctorSe__9191B5BFA490B056");
                         j.ToTable("DoctorServices");
                     });
 
@@ -117,21 +130,21 @@ public partial class AppointmentSchedulingDbContext : DbContext
                     r => r.HasOne<Specialty>().WithMany()
                         .HasForeignKey("SpecialtyId")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__DoctorSpe__Speci__44FF419A"),
+                        .HasConstraintName("FK__DoctorSpe__Speci__4BAC3F29"),
                     l => l.HasOne<Doctor>().WithMany()
                         .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__DoctorSpe__Docto__440B1D61"),
+                        .HasConstraintName("FK__DoctorSpe__Docto__4AB81AF0"),
                     j =>
                     {
-                        j.HasKey("DoctorId", "SpecialtyId").HasName("PK__DoctorSp__B0B681D56C59DF5C");
+                        j.HasKey("DoctorId", "SpecialtyId").HasName("PK__DoctorSp__B0B681D53711EA5E");
                         j.ToTable("DoctorSpecialties");
                     });
         });
 
         modelBuilder.Entity<DoctorSchedule>(entity =>
         {
-            entity.HasKey(e => e.DoctorScheduleId).HasName("PK__DoctorSc__8B4DFC5C0EA89F2A");
+            entity.HasKey(e => e.DoctorScheduleId).HasName("PK__DoctorSc__8B4DFC5C1E3DF71F");
 
             entity.Property(e => e.DayOfWeek)
                 .HasMaxLength(10)
@@ -155,7 +168,7 @@ public partial class AppointmentSchedulingDbContext : DbContext
 
         modelBuilder.Entity<Feedback>(entity =>
         {
-            entity.HasKey(e => e.FeedbackId).HasName("PK__Feedback__6A4BEDD634D4F9A5");
+            entity.HasKey(e => e.FeedbackId).HasName("PK__Feedback__6A4BEDD647F69444");
 
             entity.Property(e => e.DoctorFeedbackContent).HasColumnType("text");
             entity.Property(e => e.FeedbackDate).HasColumnType("datetime");
@@ -169,7 +182,7 @@ public partial class AppointmentSchedulingDbContext : DbContext
 
         modelBuilder.Entity<Patient>(entity =>
         {
-            entity.HasKey(e => e.PatientId).HasName("PK__Patients__970EC3662A279A64");
+            entity.HasKey(e => e.PatientId).HasName("PK__Patients__970EC3662DDACCB4");
 
             entity.Property(e => e.PatientId).ValueGeneratedNever();
             entity.Property(e => e.Rank)
@@ -185,7 +198,7 @@ public partial class AppointmentSchedulingDbContext : DbContext
 
         modelBuilder.Entity<Reservation>(entity =>
         {
-            entity.HasKey(e => e.ReservationId).HasName("PK__Reservat__B7EE5F245D05937A");
+            entity.HasKey(e => e.ReservationId).HasName("PK__Reservat__B7EE5F2402BDF2BF");
 
             entity.Property(e => e.AppointmentDate).HasColumnType("datetime");
             entity.Property(e => e.PriorExaminationImg)
@@ -214,7 +227,7 @@ public partial class AppointmentSchedulingDbContext : DbContext
 
         modelBuilder.Entity<Room>(entity =>
         {
-            entity.HasKey(e => e.RoomId).HasName("PK__Rooms__3286393963450D3C");
+            entity.HasKey(e => e.RoomId).HasName("PK__Rooms__32863939FBE6BDCF");
 
             entity.Property(e => e.Location)
                 .HasMaxLength(255)
@@ -229,9 +242,8 @@ public partial class AppointmentSchedulingDbContext : DbContext
 
         modelBuilder.Entity<Service>(entity =>
         {
-            entity.HasKey(e => e.ServiceId).HasName("PK__Services__C51BB00AC2F06AA4");
+            entity.HasKey(e => e.ServiceId).HasName("PK__Services__C51BB00A313792D0");
 
-            entity.Property(e => e.Devices).HasColumnType("text");
             entity.Property(e => e.Image)
                 .HasMaxLength(200)
                 .IsUnicode(false)
@@ -253,11 +265,26 @@ public partial class AppointmentSchedulingDbContext : DbContext
                 .HasForeignKey(d => d.SpecialtyId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("SpecialtyId_FK");
+
+            entity.HasMany(d => d.Devices).WithMany(p => p.Services)
+                .UsingEntity<Dictionary<string, object>>(
+                    "DeviceService",
+                    r => r.HasOne<Device>().WithMany()
+                        .HasForeignKey("DeviceId")
+                        .HasConstraintName("FK__DeviceSer__Devic__66603565"),
+                    l => l.HasOne<Service>().WithMany()
+                        .HasForeignKey("ServiceId")
+                        .HasConstraintName("FK__DeviceSer__Servi__656C112C"),
+                    j =>
+                    {
+                        j.HasKey("ServiceId", "DeviceId").HasName("PK__DeviceSe__C185A23B4B1C9853");
+                        j.ToTable("DeviceServices");
+                    });
         });
 
         modelBuilder.Entity<Slot>(entity =>
         {
-            entity.HasKey(e => e.SlotId).HasName("PK__Slots__0A124AAF313319EA");
+            entity.HasKey(e => e.SlotId).HasName("PK__Slots__0A124AAF8F7202ED");
 
             entity.Property(e => e.SlotId).ValueGeneratedNever();
             entity.Property(e => e.SlotEndTime).HasDefaultValueSql("(NULL)");
@@ -266,17 +293,38 @@ public partial class AppointmentSchedulingDbContext : DbContext
 
         modelBuilder.Entity<Specialty>(entity =>
         {
-            entity.HasKey(e => e.SpecialtyId).HasName("PK__Specialt__D768F6A813190650");
+            entity.HasKey(e => e.SpecialtyId).HasName("PK__Specialt__D768F6A88BB02DCB");
 
+            entity.Property(e => e.Image)
+                .HasMaxLength(200)
+                .IsUnicode(false)
+                .HasDefaultValue("https://th.bing.com/th/id/OIP.5kVbDAdvd-TbbhL31d-2sgHaE4?w=264&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
             entity.Property(e => e.SpecialtyDescription).HasColumnType("text");
             entity.Property(e => e.SpecialtyName)
                 .HasMaxLength(100)
                 .IsUnicode(false);
+
+            entity.HasMany(d => d.Devices).WithMany(p => p.Specialties)
+                .UsingEntity<Dictionary<string, object>>(
+                    "DeviceSpecialty",
+                    r => r.HasOne<Device>().WithMany()
+                        .HasForeignKey("DeviceId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__DeviceSpe__Devic__44FF419A"),
+                    l => l.HasOne<Specialty>().WithMany()
+                        .HasForeignKey("SpecialtyId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__DeviceSpe__Speci__440B1D61"),
+                    j =>
+                    {
+                        j.HasKey("SpecialtyId", "DeviceId").HasName("PK__DeviceSp__D3F6E499DD4103C8");
+                        j.ToTable("DeviceSpecialties");
+                    });
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C2F10C7CC");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C8F792954");
 
             entity.HasIndex(e => e.CitizenId, "CitizenId_Unique").IsUnique();
 
